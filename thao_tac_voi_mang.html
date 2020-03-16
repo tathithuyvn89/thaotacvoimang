@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thao tac voi mang</title>
+</head>
+<body>
+<form>
+    <h1> Sample Screen</h1>
+    <input  id="input" type="text"  />
+    <button type="button" value="Add" onclick="add_element_to_array()"> Add</button>
+    <button type="button" value="Display" onclick="display_array()">Display</button>
+    <p id="result" > Result</p>
+</form>
+<script>
+    var Array= [];
+    let i = 0;
+    function add_element_to_array() {
+        Array[i]= document.getElementById("input").value;
+        alert("Element " + i + " is " + Array[i]);
+        i++;
+        document.getElementById("input").value= "";
+
+    }
+    function display_array() {
+        let e= "<hr>";
+        for (let n=0; n<Array.length; n++){
+            e= e+ "Element " + n + " is "+ Array[n]+ "<br/>";
+        }document.getElementById("result").innerHTML= e;
+    }
+
+</script>
+
+</body>
+</html>
